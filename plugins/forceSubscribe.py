@@ -25,7 +25,7 @@ def _onUnMuteRequest(client, cb):
             if cb.message.reply_to_message.from_user.id == user_id:
               cb.message.delete()
           except UserNotParticipant:
-            client.answer_callback_query(cb.id, text="❗ Rejoignez le "canal" mentionné et appuyez à nouveau sur le bouton "Libérer moi".", show_alert=True)
+            client.answer_callback_query(cb.id, text="❗ Rejoignez le canal mentionné et appuyez à nouveau sur le bouton Libérer moi.", show_alert=True)
       else:
         client.answer_callback_query(cb.id, text="❗ Vous êtes reistreint par les administrateurs pour d'autres raisons.", show_alert=True)
     else:
@@ -54,7 +54,7 @@ def _check_member(client, message):
       except UserNotParticipant:
         try:
           sent_message = message.reply_text(
-              " {} , vous n'êtes pas encore abonné à ma chaîne. Veuillez vous joindre en utilisant le bouton ci-dessous et appuyez sur le bouton Libérez moi pour te libérer yourself.".format(message.from_user.mention, channel, channel),
+              " {} , vous n'êtes pas encore abonné à ma chaîne. Veuillez vous joindre en utilisant le bouton ci-dessous et appuyez sur le bouton Libérez moi pour te libérer.".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
              reply_markup=InlineKeyboardMarkup(
             [
