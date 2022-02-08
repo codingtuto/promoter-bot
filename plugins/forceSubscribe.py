@@ -96,7 +96,7 @@ def config(client, message):
                 time.sleep(1)
           sent_message.edit('✅ **Désactiver tous les membres qui sont désactivés par moi.**')
         except ChatAdminRequired:
-          sent_message.edit('❗ **Je ne suis pas admin dans ce groupe.**\n__Je ne peux pas réactiver le son des membres car je ne suis pas administrateur dans ce chat, faites-moi administrateur avec l'autorisation d'interdire l'utilisateur.__')
+          sent_message.edit('❗ **Je ne suis pas admin dans ce groupe.**\n__Je ne peux pas réactiver le son des membres car je ne suis pas administrateur dans ce chat, faites-moi administrateur avec autorisation de bannir des membres.__')
       else:
         try:
           client.get_chat_member(input_str, "me")
