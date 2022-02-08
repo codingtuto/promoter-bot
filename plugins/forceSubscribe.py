@@ -105,7 +105,7 @@ def config(client, message):
               channel_url = client.export_chat_invite_link(int(input_str))
           else:
               channel_url = f"https://t.me/{input_str}"
-          message.reply_text(f"✅ **Forcer l'abonnement est activé**\n__Forcer l'abonnement est activé, tous les membres du groupe doivent s'abonner au  [canal]({channel_url}) avant d'écrire dans ce groupe./n**Devellopée par l'équipe** @codingtuto__", disable_web_page_preview=True)
+          message.reply_text(f"✅ **Forcer l'abonnement est activé**\n__Forcer l'abonnement est activé, tous les membres du groupe doivent s'abonner au  [canal]({channel_url}) avant d'entamer une conversation dans ce groupe.**Devellopée par l'équipe** @codingtuto__", disable_web_page_preview=True)
         except UserNotParticipant:
           message.reply_text(f"❗ **Pas administrateur dans le canal**\n__Je ne suis pas administrateur dans ce [canal]({channel_url}). Ajoutez-moi en tant qu'administrateur afin d'activer ForceSubscribe.__", disable_web_page_preview=True)
         except (UsernameNotOccupied, PeerIdInvalid):
